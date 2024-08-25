@@ -15,8 +15,8 @@ message Headers {
 }
 
 message ReportInboundRequest {
-  string app_id = 1;
-  string server_id = 2;
+  string appId = 1;
+  string serverId = 2;
   string method = 3;
   string path = 4;
   string query = 5;
@@ -26,14 +26,14 @@ message ReportInboundRequest {
 }
 
 message ReportInboundResponse {
-  string request_id = 1;
+  string requestId = 1;
 }
 
 message ReportResponseToInboundRequest {
-  string request_id = 1;
-  string app_id = 2;
+  string requestId = 1;
+  string appId = 2;
   string status = 3;
   string body = 4;
   Headers headers = 5;
-  int64 processing_time_ms = 7;
+  int64 processingTimeMs = 7;
 }

@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package sysmon;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+service SysmonService {
+    rpc ReportSystemState(ReportSystemStateRequest) returns (google.protobuf.Empty) {}
+}
+
+message NetworkStats {
+    string interface = 1;
+    double rxSec = 2;
+    double txSec = 3;
+}
+
+message MemUsage {
+    double active = 1;
+    double total = 2;
+    string usagePercent = 3;
+}
+
+message DiskIO {
+    double read = 1;
+    double write = 2;
+}
+
+message Battery {
+    double percent = 1;
+    bool isCharging = 2;
+}
+
+message SystemInfo {
+    string cpuLoad = 1;
+    MemUsage memUsage = 2;
+    DiskIO diskIO = 3;
+    repeated NetworkStats networkStats = 4;
+    Battery battery = 5;
+}
+
+message ReportSystemStateRequest {
+    string appId = 1;
+    string serverId = 2;
+    google.protobuf.Timestamp timestamp = 10;
+    SystemInfo systemInfo = 11;
+}

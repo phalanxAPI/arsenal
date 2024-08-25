@@ -5,7 +5,7 @@ package phalanx.arsenal.lighthouse.navigator;
 import "google/protobuf/empty.proto";
 
 service NavigatorService {
-    rpc update(NavigatorRequest) returns (google.protobuf.Empty) {}
+    rpc UpdateRoutes(NavigatorRequest) returns (google.protobuf.Empty) {}
 }
 
 message RoutingTree {
