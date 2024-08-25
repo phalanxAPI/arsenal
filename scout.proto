@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package phalanx.arsenal.scout;
+
+service ScoutService {
+    rpc scanApp(ScoutRequest) returns (ScoutResponse);
+}
+
+message ScoutRequest {
+    string appId = 1;
+}
+
+message ScoutResponse {
+    string scanId = 1;
+}
