@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package phalanx.arsenal.lighthouse.navigator;
+
+service NavigatorService {
+    rpc update(NavigatorRequest) returns (google.protobuf.Empty) {}
+}
+
+message RoutingTree {
+    map<string, bool> methods = 1;
+    map<string, RoutingTree> children = 2;
+}
+
+message NavigatorRequest {
+    string appId = 1;
+    RoutingTree routingTree = 2;
+}
