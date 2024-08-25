@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package phalanx.arsenal.lighthouse.navigator;
 
+import "google/protobuf/empty.proto";
+
 service NavigatorService {
     rpc update(NavigatorRequest) returns (google.protobuf.Empty) {}
 }
