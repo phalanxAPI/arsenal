@@ -1,5 +1,5 @@
-import mongoose, { Document, Schema } from "mongoose";
-import { IBattery, IDiskIO, IMemoryUsage, NetworkStats, SystemInfo } from "../types/system-info";
+import mongoose, { Schema, Document } from 'mongoose';
+import { SystemInfo, IMemoryUsage, IDiskIO, IBattery, NetworkStats } from '../types/system-info';
 
 type SystemInfoDoc = Document & SystemInfo;
 
@@ -26,11 +26,11 @@ const NetworkStatsSchema: Schema<NetworkStats> = new Schema({
 });
 
 const SystemInfoSchema: Schema<SystemInfoDoc> = new Schema({
-    cpuLoad: { type: Number, required: true } as any,
-    memUsage: { type: MemoryUsageSchema, required: true } as any,
-    diskIO: { type: DiskIOSchema, required: true } as any,
-    networkStats: { type: [NetworkStatsSchema], required: true } as any,
-    battery: { type: BatterySchema as any, required: true },
+    cpuLoad: { type: Number, required: true },
+    memUsage: { type: MemoryUsageSchema, required: true },
+    diskIO: { type: DiskIOSchema, required: true },
+    networkStats: { type: [NetworkStatsSchema], required: true },
+    battery: { type: BatterySchema, required: true },
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now },
 }, { timestamps: true });

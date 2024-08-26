@@ -1,3 +1,5 @@
+import { PopulatedDoc } from "mongoose";
+
 export type NetworkStats = {
     interface: string;
     rx_sec: number;
@@ -21,11 +23,11 @@ export interface IBattery {
 }
 
 export type SystemInfo = {
-    cpuLoad: number;
-    memUsage: IMemoryUsage;
-    diskIO: IDiskIO;
-    networkStats: NetworkStats[];
-    battery: IBattery;
+    cpuLoad: number; 
+    memUsage: PopulatedDoc<IMemoryUsage>;
+    diskIO: PopulatedDoc<IDiskIO>;
+    networkStats: PopulatedDoc<NetworkStats[]>;
+    battery: PopulatedDoc<IBattery>;
     createdAt: Date;
     updatedAt: Date;
 }

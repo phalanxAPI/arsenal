@@ -4,7 +4,7 @@ import { Scan } from "../types/scan";
 type ScanDoc = Document & Scan;
 
 const ScanSchema: Schema<ScanDoc> = new Schema({
-    appId: { type: Schema.Types.ObjectId as any, ref: 'Application', required: true },
+    appId: { type: Schema.Types.ObjectId, ref: 'Application', required: true },
     scanDate: { type: Date, default: Date.now },
     outputSummary: { type: String, required: true },
 }, { timestamps: true });

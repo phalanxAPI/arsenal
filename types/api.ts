@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { PopulatedDoc } from 'mongoose';
 
 export type API = {
     name: string;
@@ -8,5 +8,5 @@ export type API = {
     isDeprecated: boolean;
     createdAt: Date;
     updatedAt: Date;
-    appId: mongoose.Types.ObjectId; // Reference to Application
+    appId: PopulatedDoc<mongoose.Types.ObjectId>; // Reference to Application
 }

@@ -1,8 +1,8 @@
-import mongoose from "mongoose";
+import mongoose, { PopulatedDoc } from "mongoose";
 
 export type RequestLog = {
-    appId: mongoose.Types.ObjectId; // Reference to Application
-    serverId: mongoose.Types.ObjectId; // Reference to Server
+    appId: PopulatedDoc<mongoose.Types.ObjectId>; // Reference to Application
+    serverId: PopulatedDoc<mongoose.Types.ObjectId>; // Reference to Server
     requestType: 'INCOMING' | 'OUTGOING';
     method: string;
     url: string;

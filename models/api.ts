@@ -11,7 +11,7 @@ const APISchema: Schema<APIDoc> = new Schema({
     isDeprecated: { type: Boolean, default: false },
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now },
-    appId: { type: mongoose.Schema.Types.ObjectId as any, ref: 'Application' }
+    appId: { type: mongoose.Schema.Types.ObjectId, ref: 'Application' }
 }, { timestamps: true });
 
 const API = mongoose.model<APIDoc>('API', APISchema);

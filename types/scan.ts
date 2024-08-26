@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+import mongoose, { PopulatedDoc } from "mongoose";
 
 export type Scan = {
-    appId: mongoose.Types.ObjectId; // Reference to Application
+    appId: PopulatedDoc<mongoose.Types.ObjectId>; // Reference to Application
     scanDate: Date;
     outputSummary: string;
     createdAt: Date;

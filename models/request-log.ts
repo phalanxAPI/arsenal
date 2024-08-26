@@ -4,8 +4,8 @@ import { RequestLog } from "../types/request-log";
 type RequestLogSchemaDoc = Document & RequestLog;
 
 const RequestLogSchema: Schema<RequestLogSchemaDoc> = new Schema({
-    appId: { type: Schema.Types.ObjectId, ref: 'Application', required: true } as any,
-    serverId: { type: Schema.Types.ObjectId, required: true } as any,
+    appId: { type: Schema.Types.ObjectId, ref: 'Application', required: true },
+    serverId: { type: Schema.Types.ObjectId, required: true },
     requestType: { type: String, enum: ['INCOMING', 'OUTGOING'], required: true },
     method: { type: String, required: true },
     url: { type: String, required: true },
