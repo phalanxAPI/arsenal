@@ -26,6 +26,8 @@ const NetworkStatsSchema: Schema<NetworkStats> = new Schema({
 });
 
 const SystemInfoSchema: Schema<SystemInfoDoc> = new Schema({
+    appId: { type: Schema.Types.ObjectId, ref: 'Application', required: true },
+    serverId: { type: Schema.Types.ObjectId, required: true },
     cpuLoad: { type: Number, required: true },
     memUsage: { type: MemoryUsageSchema, required: true },
     diskIO: { type: DiskIOSchema, required: true },

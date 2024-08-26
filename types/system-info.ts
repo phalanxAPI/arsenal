@@ -1,4 +1,4 @@
-import { PopulatedDoc } from "mongoose";
+import mongoose, { PopulatedDoc } from "mongoose";
 
 export type NetworkStats = {
     interface: string;
@@ -23,6 +23,8 @@ export interface IBattery {
 }
 
 export type SystemInfo = {
+    appId: PopulatedDoc<mongoose.Types.ObjectId>; 
+    serverId: PopulatedDoc<mongoose.Types.ObjectId>; 
     cpuLoad: number; 
     memUsage: PopulatedDoc<IMemoryUsage>;
     diskIO: PopulatedDoc<IDiskIO>;
