@@ -1,4 +1,5 @@
 import mongoose, { Document, Schema } from "mongoose";
+import { User } from "../types/user";
 
 type UserDoc = Document & User;
 
