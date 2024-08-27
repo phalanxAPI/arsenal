@@ -8,4 +8,5 @@ export type Issue = {
     raisedAt: Date;
     apiId: PopulatedDoc<mongoose.Types.ObjectId>; // Reference to API
     scanId?: PopulatedDoc<mongoose.Types.ObjectId>; // Optional reference to Scan
+    appId: PopulatedDoc<mongoose.Types.ObjectId>; // Reference to Application
 }

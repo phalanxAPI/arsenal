@@ -10,7 +10,8 @@ const IssueSchema: Schema<IssueDoc> = new Schema({
     status: { type: String, enum: ['OPEN', 'IN_PROGRESS', 'RESOLVED', 'CLOSED'], default: 'OPEN' },
     raisedAt: { type: Date, default: Date.now },
     apiId: { type: Schema.Types.ObjectId, ref: 'API', required: true },
-    scanId: { type: Schema.Types.ObjectId, ref: 'Scan' } // Optional reference to Scan
+    scanId: { type: Schema.Types.ObjectId, ref: 'Scan' }, // Optional reference to Scan
+    appId: { type: Schema.Types.ObjectId, ref: 'Application', required: true }
 }, { timestamps: true });
 
 const Issue = mongoose.model<IssueDoc>('Issue', IssueSchema);
