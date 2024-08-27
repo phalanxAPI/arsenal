@@ -6,6 +6,7 @@ type RequestLogSchemaDoc = Document & RequestLog;
 const RequestLogSchema: Schema<RequestLogSchemaDoc> = new Schema({
     appId: { type: Schema.Types.ObjectId, ref: 'Application', required: true },
     serverId: { type: Schema.Types.ObjectId, required: true },
+    apiId: { type: Schema.Types.ObjectId, ref: 'API', required: true },
     requestType: { type: String, enum: ['INCOMING', 'OUTGOING'], required: true },
     method: { type: String, required: true },
     url: { type: String, required: true },

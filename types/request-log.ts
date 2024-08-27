@@ -3,6 +3,7 @@ import mongoose, { PopulatedDoc } from "mongoose";
 export type RequestLog = {
     appId: PopulatedDoc<mongoose.Types.ObjectId>; // Reference to Application
     serverId: PopulatedDoc<mongoose.Types.ObjectId>; // Reference to Server
+    apiId: PopulatedDoc<mongoose.Types.ObjectId>; // Reference to API
     requestType: 'INCOMING' | 'OUTGOING';
     method: string;
     url: string;
