@@ -5,7 +5,6 @@ export type APIDoc = Document & API;
 
 const APISchema: Schema<APIDoc> = new Schema(
   {
-    name: { type: String, required: true },
     endpoint: { type: String, required: true, unique: true },
     method: { type: String, required: true },
     isVerified: { type: Boolean, default: false },
