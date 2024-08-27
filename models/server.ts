@@ -9,5 +9,5 @@ const ServerSchema: Schema<ServerDoc> = new Schema({
     appId: { type: Schema.Types.ObjectId, ref: 'Application', required: true },
 }, { timestamps: true });
 
-const Application = mongoose.model<ServerDoc>('Application', ServerSchema);
-export default Application;
+const Server = mongoose.model<ServerDoc>('Server', ServerSchema);
+export default Server;

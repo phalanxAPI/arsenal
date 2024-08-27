@@ -1,4 +1,5 @@
 export type Application = {
-    name: string;
-    createdAt: Date;
-}
+  name: string;
+  baseUrl: string;
+  createdAt: Date;
+};
