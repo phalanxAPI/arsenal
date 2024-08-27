@@ -5,6 +5,7 @@ export enum SecurityConfigType {
   USER_DATA = "USER_DATA",
   SUCCESS_FLOW = "SUCCESS_FLOW",
   BROKEN_OBJECT_LEVEL_AUTH = "BROKEN_OBJECT_LEVEL_AUTH",
+  BROKEN_AUTHENTICATION = "BROKEN_AUTHENTICATION",
 }
 
 export type SecurityConfiguration = {
