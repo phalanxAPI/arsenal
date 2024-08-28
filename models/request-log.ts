@@ -3,11 +3,16 @@ import { RequestLog } from "../types/request-log";
 
 type RequestLogSchemaDoc = Document & RequestLog;
 
-const RequestLogSchema: Schema<RequestLogSchemaDoc> = new Schema({
-    appId: { type: Schema.Types.ObjectId, ref: 'Application', required: true },
+const RequestLogSchema: Schema<RequestLogSchemaDoc> = new Schema(
+  {
+    appId: { type: Schema.Types.ObjectId, ref: "Application", required: true },
     serverId: { type: Schema.Types.ObjectId, required: true },
-    apiId: { type: Schema.Types.ObjectId, ref: 'API', required: true },
-    requestType: { type: String, enum: ['INCOMING', 'OUTGOING'], required: true },
+    apiId: { type: Schema.Types.ObjectId, ref: "API", required: true },
+    requestType: {
+      type: String,
+      enum: ["INCOMING", "OUTGOING"],
+      required: true,
+    },
     method: { type: String, required: true },
     url: { type: String, required: true },
     params: { type: Schema.Types.Mixed },
@@ -15,8 +20,13 @@ const RequestLogSchema: Schema<RequestLogSchemaDoc> = new Schema({
     headers: { type: Schema.Types.Mixed },
     statusCode: { type: Number, required: true },
     timestamp: { type: Date, default: Date.now },
-    duration: { type: Number }
-}, { timestamps: true });
+    duration: { type: Number },
+  },
+  { timestamps: true }
+);
 
-const RequestLog = mongoose.model<RequestLogSchemaDoc>('RequestLog', RequestLogSchema);
+const RequestLog = mongoose.model<RequestLogSchemaDoc>(
+  "RequestLog",
+  RequestLogSchema
+);
 export default RequestLog;
