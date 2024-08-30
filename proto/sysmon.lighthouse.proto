@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package phalanx.arsenal.lighthouse.sysmon;
+package phalanx.arsenal.sysmon;
 
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
