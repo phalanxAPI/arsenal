@@ -2,8 +2,8 @@ import mongoose, { PopulatedDoc } from "mongoose";
 
 export type NetworkStats = {
   interface: string;
-  rx_sec: number;
-  tx_sec: number;
+  rxSec: number;
+  txSec: number;
 };
 
 export interface IMemoryUsage {

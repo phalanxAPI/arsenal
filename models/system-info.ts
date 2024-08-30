@@ -27,8 +27,8 @@ const BatterySchema: Schema<IBattery> = new Schema({
 
 const NetworkStatsSchema: Schema<NetworkStats> = new Schema({
   interface: { type: String, required: true },
-  rx_sec: { type: Number, required: true },
-  tx_sec: { type: Number, required: true },
+  rxSec: { type: Number, required: true },
+  txSec: { type: Number, required: true },
 });
 
 const SystemInfoSchema: Schema<SystemInfoDoc> = new Schema(
