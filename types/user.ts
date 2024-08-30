@@ -4,4 +4,4 @@ export type User = {
   lastName: string;
   createdAt: Date;
   avatar?: string;
-}
+};
