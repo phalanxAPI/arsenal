@@ -17,7 +17,7 @@ message ReportOutboundRequest {
     map<string, string> reqParams = 5;
     map<string, string> reqBody = 6;
     map<string, string> reqHeaders = 7;
-    string status = 8;
+    string statusCode = 8;
     map<string, string> resBody = 9;
     map<string, string> resHeaders = 10;
     google.protobuf.Timestamp timestamp = 11;

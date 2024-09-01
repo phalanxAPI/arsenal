@@ -28,7 +28,7 @@ message ReportInboundResponse {
 message ReportResponseToInboundRequest {
   string requestId = 1;
   string appId = 2;
-  string status = 3;
+  string statusCode = 3;
   map<string, string> body = 4;
   map<string, string> headers = 5;
   int64 processingTimeMs = 7;
