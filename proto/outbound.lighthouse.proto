@@ -14,8 +14,11 @@ message ReportOutboundRequest {
     string serverId = 2;
     string method = 3;
     string path = 4;
-    string query = 5;
-    string body = 6;
-    map<string, string> headers = 7;
+    map<string, string> reqQuery = 5;
+    map<string, string> reqBody = 6;
+    map<string, string> reqHeaders = 7;
+    string status = 8;
+    map<string, string> resBody = 9;
+    map<string, string> resHeaders = 10;
     google.protobuf.Timestamp timestamp = 10;
 }

@@ -15,7 +15,7 @@ message ReportInboundRequest {
   string serverId = 2;
   string method = 3;
   string path = 4;
-  map<string, string> query = 5;
+  map<string, string> params = 5;
   map<string, string> body = 6;
   map<string, string> headers = 7;
   google.protobuf.Timestamp timestamp = 10;
