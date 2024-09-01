@@ -18,7 +18,7 @@ message ReportInboundRequest {
   map<string, string> params = 5;
   map<string, string> body = 6;
   map<string, string> headers = 7;
-  google.protobuf.Timestamp timestamp = 10;
+  google.protobuf.Timestamp timestamp = 8;
 }
 
 message ReportInboundResponse {

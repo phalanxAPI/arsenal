@@ -20,5 +20,5 @@ message ReportOutboundRequest {
     string status = 8;
     map<string, string> resBody = 9;
     map<string, string> resHeaders = 10;
-    google.protobuf.Timestamp timestamp = 10;
+    google.protobuf.Timestamp timestamp = 11;
 }
