@@ -17,7 +17,7 @@ const APISchema: Schema<APIDoc> = new Schema(
 );
 
 // Index on pair of endpoint and method as unique
-APISchema.index({ endpoint: 1, method: 1 }, { unique: true });
+APISchema.index({ endpoint: 1, method: 1, appId: 1 }, { unique: true });
 
 // Index for making the method case-insensitive
 APISchema.index({ method: 1 }, { collation: { locale: "en", strength: 2 } });
