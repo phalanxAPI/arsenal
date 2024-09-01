@@ -10,18 +10,14 @@ service InboundService {
   rpc ReportResponseToInbound(ReportResponseToInboundRequest) returns (google.protobuf.Empty) {}
 }
 
-message Headers {
-  map<string, string> entries = 1;
-}
-
 message ReportInboundRequest {
   string appId = 1;
   string serverId = 2;
   string method = 3;
   string path = 4;
-  string query = 5;
-  string body = 6;
-  Headers headers = 7;
+  map<string, string> query = 5;
+  map<string, string> body = 6;
+  map<string, string> headers = 7;
   google.protobuf.Timestamp timestamp = 10;
 }
 
@@ -33,7 +29,7 @@ message ReportResponseToInboundRequest {
   string requestId = 1;
   string appId = 2;
   string status = 3;
-  string body = 4;
-  Headers headers = 5;
+  map<string, string> body = 4;
+  map<string, string> headers = 5;
   int64 processingTimeMs = 7;
 }

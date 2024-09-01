@@ -9,10 +9,6 @@ service OutboundService {
     rpc ReportOutbound(ReportOutboundRequest) returns (google.protobuf.Empty) {}
 }
 
-message Headers {
-    map<string, string> entries = 1;
-}
-
 message ReportOutboundRequest {
     string appId = 1;
     string serverId = 2;
@@ -20,6 +16,6 @@ message ReportOutboundRequest {
     string path = 4;
     string query = 5;
     string body = 6;
-    Headers headers = 7;
+    map<string, string> headers = 7;
     google.protobuf.Timestamp timestamp = 10;
 }
