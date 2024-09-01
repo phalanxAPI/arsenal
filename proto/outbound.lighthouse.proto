@@ -13,7 +13,7 @@ message ReportOutboundRequest {
     string appId = 1;
     string serverId = 2;
     string method = 3;
-    string path = 4;
+    string url = 4;
     map<string, string> reqQuery = 5;
     map<string, string> reqBody = 6;
     map<string, string> reqHeaders = 7;
