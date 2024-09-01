@@ -14,7 +14,7 @@ message ReportOutboundRequest {
     string serverId = 2;
     string method = 3;
     string url = 4;
-    map<string, string> reqQuery = 5;
+    map<string, string> reqParams = 5;
     map<string, string> reqBody = 6;
     map<string, string> reqHeaders = 7;
     string status = 8;
