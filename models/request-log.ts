@@ -7,7 +7,11 @@ const RequestLogSchema: Schema<RequestLogSchemaDoc> = new Schema(
   {
     appId: { type: Schema.Types.ObjectId, ref: "Application", required: true },
     serverId: { type: Schema.Types.ObjectId, required: true },
-    apiId: { type: Schema.Types.ObjectId, ref: "API", required: true },
+    // Required fom incoming requests
+    apiId: { type: Schema.Types.ObjectId, ref: "API" },
+    // Required for outgoing requests
+    url: { type: String },
+    method: { type: String },
     requestType: {
       type: String,
       enum: ["INCOMING", "OUTGOING"],
