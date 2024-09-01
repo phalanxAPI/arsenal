@@ -10,9 +10,9 @@ export type RequestLog = {
   reqParams?: Record<string, any>;
   reqBody?: Record<string, any>;
   reqHeaders?: Record<string, any>;
+  statusCode: number;
   resBody?: Record<string, any>;
   resHeaders?: Record<string, any>;
-  statusCode: number;
   timestamp: Date;
   duration?: number; // Duration in ms
 };
