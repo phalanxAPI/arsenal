@@ -16,6 +16,6 @@ message RoutingTree {
 message NavigatorRequest {
     string appId = 1;
     string serverId = 2;
-    string baseurl = 3;
+    string baseUrl = 3;
     RoutingTree routingTree = 4;
 }
