@@ -5,8 +5,6 @@ export type RequestLog = {
   serverId: PopulatedDoc<mongoose.Types.ObjectId>; // Reference to Server
   apiId: PopulatedDoc<mongoose.Types.ObjectId>; // Reference to API
   requestType: "INCOMING" | "OUTGOING";
-  method: string;
-  url: string;
   reqParams?: Record<string, any>;
   reqBody?: Record<string, any>;
   reqHeaders?: Record<string, any>;

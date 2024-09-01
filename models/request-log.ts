@@ -13,8 +13,6 @@ const RequestLogSchema: Schema<RequestLogSchemaDoc> = new Schema(
       enum: ["INCOMING", "OUTGOING"],
       required: true,
     },
-    method: { type: String, required: true },
-    url: { type: String, required: true },
     reqParams: { type: Schema.Types.Mixed },
     reqBody: { type: Schema.Types.Mixed },
     reqHeaders: { type: Schema.Types.Mixed },
