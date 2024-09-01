@@ -26,6 +26,7 @@ export type SystemInfo = {
   appId: PopulatedDoc<mongoose.Types.ObjectId>;
   serverId: PopulatedDoc<mongoose.Types.ObjectId>;
   cpuLoad: number;
+  timestamp: Date;
   memUsage: PopulatedDoc<IMemoryUsage>;
   diskIO: PopulatedDoc<IDiskIO>;
   networkStats: PopulatedDoc<NetworkStats[]>;
