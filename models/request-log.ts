@@ -20,7 +20,7 @@ const RequestLogSchema: Schema<RequestLogSchemaDoc> = new Schema(
     reqParams: { type: Schema.Types.Mixed },
     reqBody: { type: Schema.Types.Mixed },
     reqHeaders: { type: Schema.Types.Mixed },
-    statusCode: { type: Number, required: true },
+    statusCode: { type: Number },
     resBody: { type: Schema.Types.Mixed },
     resHeaders: { type: Schema.Types.Mixed },
     timestamp: { type: Date, default: Date.now },
