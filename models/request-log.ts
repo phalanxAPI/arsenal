@@ -1,7 +1,7 @@
 import mongoose, { Document, Schema } from "mongoose";
 import { RequestLog } from "../types/request-log";
 
-type RequestLogSchemaDoc = Document & RequestLog;
+export type RequestLogSchemaDoc = Document & RequestLog;
 
 const RequestLogSchema: Schema<RequestLogSchemaDoc> = new Schema(
   {
