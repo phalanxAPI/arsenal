@@ -16,7 +16,8 @@ const IssueSchema: Schema<IssueDoc> = new Schema(
     },
     raisedAt: { type: Date, default: Date.now },
     apiId: { type: Schema.Types.ObjectId, ref: "API" },
-    scanId: { type: Schema.Types.ObjectId, ref: "Scan" }, // Optional reference to Scan
+    appId: { type: Schema.Types.ObjectId, ref: "Application", required: true },
+    scanId: { type: Schema.Types.ObjectId, ref: "Scan" },
   },
   { timestamps: true }
 );
