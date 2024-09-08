@@ -10,6 +10,7 @@ const UserSchema: Schema<UserDoc> = new Schema(
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     avatar: { type: String },
+    clerkId: { type: String },
   },
   { timestamps: true }
 );
