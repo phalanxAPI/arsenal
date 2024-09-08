@@ -1,7 +1,7 @@
 import mongoose, { Document, Schema } from "mongoose";
 import { Server } from "../types/server";
 
-type ServerDoc = Document & Server;
+export type ServerDoc = Document & Server;
 
 const ServerSchema: Schema<ServerDoc> = new Schema(
   {
